@@ -121,8 +121,10 @@ body {
 }
 
 .profile-photo img {
-  width: min(420px, 100%);
-  height: auto;
+  width: 100%;
+  max-width: 700px; /* match the bio width */
+  max-height: 420px; /* prevent overly tall display */
+  object-fit: cover;
   border-radius: 12px;
   border: 1px solid #e9ecef;
   box-shadow: 0 10px 28px rgba(30, 58, 95, 0.12);

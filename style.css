@@ -1,0 +1,232 @@
+/* ========== CSS RESET & BASE ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+}
+
+/* ========== NAVIGATION BAR ========== */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1e3a5f;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-list a {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect on nav links */
+.nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ========== LAYOUT CONTAINER ========== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ========== HERO / HOME SECTION ========== */
+.hero {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+  color: #f8f9fa;
+  padding: 3rem 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* ========== SECTIONS (SHARED) ========== */
+.section {
+  padding: 3rem 0;
+}
+
+.section h2 {
+  color: #1e3a5f;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+  background-color: #fff;
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* ========== INTERESTS SECTION ========== */
+.interests-section {
+  background-color: #f0f2f5;
+}
+
+.interests-list {
+  list-style: none;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.interests-list li {
+  padding: 0.6rem 0;
+  font-size: 1.05rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.interests-list li:last-child {
+  border-bottom: none;
+}
+
+/* ========== PROJECTS SECTION (CARDS) ========== */
+.projects-section {
+  background-color: #fff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Card-style layout for projects */
+.project-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.12);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  color: #1e3a5f;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+  background-color: #f0f2f5;
+}
+
+.contact-links {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-links p {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.contact-links a {
+  color: #1e3a5f;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.contact-links a:hover {
+  border-bottom-color: #1e3a5f;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: #1e3a5f;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ========== RESPONSIVE LAYOUT (LAPTOP & BELOW) ========== */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 0.75rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
